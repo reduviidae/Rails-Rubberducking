@@ -1,0 +1,14 @@
+<%= form_for @duck do |f| %>
+  <%= f.label :name %>:
+  <%= f.text_field :name %> <br>
+
+  <%= f.label :description %>:
+  <%= f.text_field :description %>
+
+  <% Student.all.each do |student| %>
+  <%= f.label student.name %>:
+  <%= f.check_box :student_id %>
+  <% end %>
+
+  <%= f.submit %>
+<% end  %>
